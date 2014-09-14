@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TCViewController : UIViewController
+@interface TCListViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+
+- (IBAction)refreshBarButtonItemPressed:(UIBarButtonItem *)sender;
 
 @end

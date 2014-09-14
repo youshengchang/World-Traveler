@@ -6,24 +6,32 @@
 //  Copyright (c) 2014 InfoTech Inc. All rights reserved.
 //
 
-#import "TCViewController.h"
+#import "TCListViewController.h"
 
-@interface TCViewController ()
+static NSString *const kCLIENTID = @"DFJ5UOHLCB0BBOEZDC244F3TXZLOEGLZY5O11A2DSLVFUFY4";
+static NSString *const kCLIENTSECRET = @"XGSHJLLF4YNK14CXIUF1PQRMZVXX2BAMAK3LQCTDISMRAYJE";
+
+
+@interface TCListViewController ()
 
 @end
 
-@implementation TCViewController
+@implementation TCListViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)refreshBarButtonItemPressed:(UIBarButtonItem *)sender {
 }
 
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		507102FAD22B48C89D2AA4B2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ECC8F98BDDC4093830BFD3F /* libPods.a */; };
 		8F1C439B19C3B81A00EA211A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F1C439A19C3B81A00EA211A /* Foundation.framework */; };
 		8F1C439D19C3B81A00EA211A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F1C439C19C3B81A00EA211A /* CoreGraphics.framework */; };
 		8F1C439F19C3B81A00EA211A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F1C439E19C3B81A00EA211A /* UIKit.framework */; };
@@ -14,13 +15,27 @@
 		8F1C43A719C3B81A00EA211A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C43A619C3B81A00EA211A /* main.m */; };
 		8F1C43AB19C3B81A00EA211A /* TCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C43AA19C3B81A00EA211A /* TCAppDelegate.m */; };
 		8F1C43AE19C3B81A00EA211A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F1C43AC19C3B81A00EA211A /* Main.storyboard */; };
-		8F1C43B119C3B81A00EA211A /* TCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C43B019C3B81A00EA211A /* TCViewController.m */; };
+		8F1C43B119C3B81A00EA211A /* TCListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C43B019C3B81A00EA211A /* TCListViewController.m */; };
 		8F1C43B319C3B81A00EA211A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F1C43B219C3B81A00EA211A /* Images.xcassets */; };
 		8F1C43BA19C3B81A00EA211A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F1C43B919C3B81A00EA211A /* XCTest.framework */; };
 		8F1C43BB19C3B81B00EA211A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F1C439A19C3B81A00EA211A /* Foundation.framework */; };
 		8F1C43BC19C3B81B00EA211A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F1C439E19C3B81A00EA211A /* UIKit.framework */; };
 		8F1C43C419C3B81B00EA211A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8F1C43C219C3B81B00EA211A /* InfoPlist.strings */; };
 		8F1C43C619C3B81B00EA211A /* World_TravelerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C43C519C3B81B00EA211A /* World_TravelerTests.m */; };
+		8F1C43D519C3BE6200EA211A /* AFMMRecordResponseSerializationMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C43D219C3BE6200EA211A /* AFMMRecordResponseSerializationMapper.m */; };
+		8F1C43D619C3BE6200EA211A /* AFMMRecordResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C43D419C3BE6200EA211A /* AFMMRecordResponseSerializer.m */; };
+		8F1C43D919C3C06500EA211A /* TCMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C43D819C3C06500EA211A /* TCMapViewController.m */; };
+		8F1C43DF19C54E1600EA211A /* WorldTravelerModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C43DD19C54E1600EA211A /* WorldTravelerModel.xcdatamodeld */; };
+		8F1C43E119C54E8200EA211A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F1C43E019C54E8200EA211A /* CoreData.framework */; };
+		8F1C43E419C555BA00EA211A /* Menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C43E319C555BA00EA211A /* Menu.m */; };
+		8F1C43E719C555BA00EA211A /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C43E619C555BA00EA211A /* Venue.m */; };
+		8F1C43EA19C555BB00EA211A /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C43E919C555BB00EA211A /* Contact.m */; };
+		8F1C43ED19C555BB00EA211A /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C43EC19C555BB00EA211A /* Location.m */; };
+		8F1C43F019C555BB00EA211A /* FSCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C43EF19C555BB00EA211A /* FSCategory.m */; };
+		8F1C43F419C5577100EA211A /* TCRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C43F319C5577100EA211A /* TCRecord.m */; };
+		8F1C43F819C55EBC00EA211A /* TCFourSquareSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C43F719C55EBC00EA211A /* TCFourSquareSessionManager.m */; };
+		8F1C43FA19C564A600EA211A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F1C43F919C564A600EA211A /* MapKit.framework */; };
+		8F1C43FC19C564B100EA211A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F1C43FB19C564B100EA211A /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		10672F94C2894F9BA00858D3 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		8ECC8F98BDDC4093830BFD3F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F1C439719C3B81A00EA211A /* World Traveler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "World Traveler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F1C439A19C3B81A00EA211A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8F1C439C19C3B81A00EA211A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -45,14 +62,38 @@
 		8F1C43A919C3B81A00EA211A /* TCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCAppDelegate.h; sourceTree = "<group>"; };
 		8F1C43AA19C3B81A00EA211A /* TCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCAppDelegate.m; sourceTree = "<group>"; };
 		8F1C43AD19C3B81A00EA211A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8F1C43AF19C3B81A00EA211A /* TCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCViewController.h; sourceTree = "<group>"; };
-		8F1C43B019C3B81A00EA211A /* TCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCViewController.m; sourceTree = "<group>"; };
+		8F1C43AF19C3B81A00EA211A /* TCListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCListViewController.h; sourceTree = "<group>"; };
+		8F1C43B019C3B81A00EA211A /* TCListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCListViewController.m; sourceTree = "<group>"; };
 		8F1C43B219C3B81A00EA211A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8F1C43B819C3B81A00EA211A /* World TravelerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "World TravelerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F1C43B919C3B81A00EA211A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		8F1C43C119C3B81B00EA211A /* World TravelerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "World TravelerTests-Info.plist"; sourceTree = "<group>"; };
 		8F1C43C319C3B81B00EA211A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8F1C43C519C3B81B00EA211A /* World_TravelerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = World_TravelerTests.m; sourceTree = "<group>"; };
+		8F1C43D119C3BE6200EA211A /* AFMMRecordResponseSerializationMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFMMRecordResponseSerializationMapper.h; sourceTree = "<group>"; };
+		8F1C43D219C3BE6200EA211A /* AFMMRecordResponseSerializationMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFMMRecordResponseSerializationMapper.m; sourceTree = "<group>"; };
+		8F1C43D319C3BE6200EA211A /* AFMMRecordResponseSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFMMRecordResponseSerializer.h; sourceTree = "<group>"; };
+		8F1C43D419C3BE6200EA211A /* AFMMRecordResponseSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFMMRecordResponseSerializer.m; sourceTree = "<group>"; };
+		8F1C43D719C3C06500EA211A /* TCMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCMapViewController.h; sourceTree = "<group>"; };
+		8F1C43D819C3C06500EA211A /* TCMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCMapViewController.m; sourceTree = "<group>"; };
+		8F1C43DE19C54E1600EA211A /* WorldTravelerModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WorldTravelerModel.xcdatamodel; sourceTree = "<group>"; };
+		8F1C43E019C54E8200EA211A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		8F1C43E219C555BA00EA211A /* Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Menu.h; sourceTree = "<group>"; };
+		8F1C43E319C555BA00EA211A /* Menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Menu.m; sourceTree = "<group>"; };
+		8F1C43E519C555BA00EA211A /* Venue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Venue.h; sourceTree = "<group>"; };
+		8F1C43E619C555BA00EA211A /* Venue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Venue.m; sourceTree = "<group>"; };
+		8F1C43E819C555BB00EA211A /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
+		8F1C43E919C555BB00EA211A /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
+		8F1C43EB19C555BB00EA211A /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		8F1C43EC19C555BB00EA211A /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		8F1C43EE19C555BB00EA211A /* FSCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCategory.h; sourceTree = "<group>"; };
+		8F1C43EF19C555BB00EA211A /* FSCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCategory.m; sourceTree = "<group>"; };
+		8F1C43F219C5577100EA211A /* TCRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCRecord.h; sourceTree = "<group>"; };
+		8F1C43F319C5577100EA211A /* TCRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCRecord.m; sourceTree = "<group>"; };
+		8F1C43F619C55EBC00EA211A /* TCFourSquareSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCFourSquareSessionManager.h; sourceTree = "<group>"; };
+		8F1C43F719C55EBC00EA211A /* TCFourSquareSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCFourSquareSessionManager.m; sourceTree = "<group>"; };
+		8F1C43F919C564A600EA211A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		8F1C43FB19C564B100EA211A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +101,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F1C43FC19C564B100EA211A /* CoreLocation.framework in Frameworks */,
+				8F1C43FA19C564A600EA211A /* MapKit.framework in Frameworks */,
+				8F1C43E119C54E8200EA211A /* CoreData.framework in Frameworks */,
 				8F1C439D19C3B81A00EA211A /* CoreGraphics.framework in Frameworks */,
 				8F1C439F19C3B81A00EA211A /* UIKit.framework in Frameworks */,
 				8F1C439B19C3B81A00EA211A /* Foundation.framework in Frameworks */,
+				507102FAD22B48C89D2AA4B2 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +131,7 @@
 				8F1C43BF19C3B81B00EA211A /* World TravelerTests */,
 				8F1C439919C3B81A00EA211A /* Frameworks */,
 				8F1C439819C3B81A00EA211A /* Products */,
+				10672F94C2894F9BA00858D3 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,10 +147,15 @@
 		8F1C439919C3B81A00EA211A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8F1C43FB19C564B100EA211A /* CoreLocation.framework */,
+				8F1C43F919C564A600EA211A /* MapKit.framework */,
+				8F1C43E019C54E8200EA211A /* CoreData.framework */,
+				8F1C43CF19C3BE4600EA211A /* Vendor */,
 				8F1C439A19C3B81A00EA211A /* Foundation.framework */,
 				8F1C439C19C3B81A00EA211A /* CoreGraphics.framework */,
 				8F1C439E19C3B81A00EA211A /* UIKit.framework */,
 				8F1C43B919C3B81A00EA211A /* XCTest.framework */,
+				8ECC8F98BDDC4093830BFD3F /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -112,11 +163,10 @@
 		8F1C43A019C3B81A00EA211A /* World Traveler */ = {
 			isa = PBXGroup;
 			children = (
-				8F1C43A919C3B81A00EA211A /* TCAppDelegate.h */,
-				8F1C43AA19C3B81A00EA211A /* TCAppDelegate.m */,
-				8F1C43AC19C3B81A00EA211A /* Main.storyboard */,
-				8F1C43AF19C3B81A00EA211A /* TCViewController.h */,
-				8F1C43B019C3B81A00EA211A /* TCViewController.m */,
+				8F1C43F519C55E7200EA211A /* API */,
+				8F1C43DC19C53F6700EA211A /* Views */,
+				8F1C43DB19C53F4E00EA211A /* Model */,
+				8F1C43DA19C53F3A00EA211A /* Initialization */,
 				8F1C43B219C3B81A00EA211A /* Images.xcassets */,
 				8F1C43A119C3B81A00EA211A /* Supporting Files */,
 			);
@@ -152,6 +202,83 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		8F1C43CF19C3BE4600EA211A /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				8F1C43D019C3BE6200EA211A /* AFMMRecordResponseSerializer */,
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
+		8F1C43D019C3BE6200EA211A /* AFMMRecordResponseSerializer */ = {
+			isa = PBXGroup;
+			children = (
+				8F1C43D119C3BE6200EA211A /* AFMMRecordResponseSerializationMapper.h */,
+				8F1C43D219C3BE6200EA211A /* AFMMRecordResponseSerializationMapper.m */,
+				8F1C43D319C3BE6200EA211A /* AFMMRecordResponseSerializer.h */,
+				8F1C43D419C3BE6200EA211A /* AFMMRecordResponseSerializer.m */,
+			);
+			path = AFMMRecordResponseSerializer;
+			sourceTree = "<group>";
+		};
+		8F1C43DA19C53F3A00EA211A /* Initialization */ = {
+			isa = PBXGroup;
+			children = (
+				8F1C43A919C3B81A00EA211A /* TCAppDelegate.h */,
+				8F1C43AA19C3B81A00EA211A /* TCAppDelegate.m */,
+				8F1C43AC19C3B81A00EA211A /* Main.storyboard */,
+			);
+			name = Initialization;
+			sourceTree = "<group>";
+		};
+		8F1C43DB19C53F4E00EA211A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8F1C43F119C5564800EA211A /* Model */,
+				8F1C43DD19C54E1600EA211A /* WorldTravelerModel.xcdatamodeld */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		8F1C43DC19C53F6700EA211A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8F1C43D719C3C06500EA211A /* TCMapViewController.h */,
+				8F1C43D819C3C06500EA211A /* TCMapViewController.m */,
+				8F1C43AF19C3B81A00EA211A /* TCListViewController.h */,
+				8F1C43B019C3B81A00EA211A /* TCListViewController.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		8F1C43F119C5564800EA211A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8F1C43EE19C555BB00EA211A /* FSCategory.h */,
+				8F1C43EF19C555BB00EA211A /* FSCategory.m */,
+				8F1C43EB19C555BB00EA211A /* Location.h */,
+				8F1C43EC19C555BB00EA211A /* Location.m */,
+				8F1C43E819C555BB00EA211A /* Contact.h */,
+				8F1C43E919C555BB00EA211A /* Contact.m */,
+				8F1C43E519C555BA00EA211A /* Venue.h */,
+				8F1C43E619C555BA00EA211A /* Venue.m */,
+				8F1C43E219C555BA00EA211A /* Menu.h */,
+				8F1C43E319C555BA00EA211A /* Menu.m */,
+				8F1C43F219C5577100EA211A /* TCRecord.h */,
+				8F1C43F319C5577100EA211A /* TCRecord.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		8F1C43F519C55E7200EA211A /* API */ = {
+			isa = PBXGroup;
+			children = (
+				8F1C43F619C55EBC00EA211A /* TCFourSquareSessionManager.h */,
+				8F1C43F719C55EBC00EA211A /* TCFourSquareSessionManager.m */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -159,9 +286,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8F1C43C919C3B81B00EA211A /* Build configuration list for PBXNativeTarget "World Traveler" */;
 			buildPhases = (
+				C68F75609E424E45BD9463A7 /* Check Pods Manifest.lock */,
 				8F1C439319C3B81A00EA211A /* Sources */,
 				8F1C439419C3B81A00EA211A /* Frameworks */,
 				8F1C439519C3B81A00EA211A /* Resources */,
+				98A7AF569F8D475AAE86D583 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -245,13 +374,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		98A7AF569F8D475AAE86D583 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C68F75609E424E45BD9463A7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8F1C439319C3B81A00EA211A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F1C43B119C3B81A00EA211A /* TCViewController.m in Sources */,
+				8F1C43DF19C54E1600EA211A /* WorldTravelerModel.xcdatamodeld in Sources */,
+				8F1C43D919C3C06500EA211A /* TCMapViewController.m in Sources */,
+				8F1C43F819C55EBC00EA211A /* TCFourSquareSessionManager.m in Sources */,
+				8F1C43EA19C555BB00EA211A /* Contact.m in Sources */,
+				8F1C43D619C3BE6200EA211A /* AFMMRecordResponseSerializer.m in Sources */,
+				8F1C43ED19C555BB00EA211A /* Location.m in Sources */,
+				8F1C43E719C555BA00EA211A /* Venue.m in Sources */,
+				8F1C43D519C3BE6200EA211A /* AFMMRecordResponseSerializationMapper.m in Sources */,
+				8F1C43F419C5577100EA211A /* TCRecord.m in Sources */,
+				8F1C43B119C3B81A00EA211A /* TCListViewController.m in Sources */,
 				8F1C43A719C3B81A00EA211A /* main.m in Sources */,
+				8F1C43E419C555BA00EA211A /* Menu.m in Sources */,
+				8F1C43F019C555BB00EA211A /* FSCategory.m in Sources */,
 				8F1C43AB19C3B81A00EA211A /* TCAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -374,6 +547,7 @@
 		};
 		8F1C43CA19C3B81B00EA211A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10672F94C2894F9BA00858D3 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -387,6 +561,7 @@
 		};
 		8F1C43CB19C3B81B00EA211A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10672F94C2894F9BA00858D3 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -457,6 +632,7 @@
 				8F1C43CB19C3B81B00EA211A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8F1C43CC19C3B81B00EA211A /* Build configuration list for PBXNativeTarget "World TravelerTests" */ = {
 			isa = XCConfigurationList;
@@ -465,8 +641,22 @@
 				8F1C43CE19C3B81B00EA211A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8F1C43DD19C54E1600EA211A /* WorldTravelerModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8F1C43DE19C54E1600EA211A /* WorldTravelerModel.xcdatamodel */,
+			);
+			currentVersion = 8F1C43DE19C54E1600EA211A /* WorldTravelerModel.xcdatamodel */;
+			path = WorldTravelerModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8F1C438F19C3B81A00EA211A /* Project object */;
 }
