@@ -14,8 +14,8 @@
 
 @interface Venue : TCRecord
 
-@property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) NSString * id;
+@property (nonatomic, retain) NSString *name;
+@property (nonatomic, retain) NSString *id;
 @property (nonatomic, retain) FSCategory *category;
 @property (nonatomic, retain) Contact *contact;
 @property (nonatomic, retain) Location *location;

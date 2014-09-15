@@ -14,8 +14,8 @@
 
 @interface FSCategory : TCRecord
 
-@property (nonatomic, retain) NSString * id;
-@property (nonatomic, retain) NSString * name;
+@property (nonatomic, retain) NSString *id;
+@property (nonatomic, retain) NSString *name;
 @property (nonatomic, retain) Venue *venue;
 
 @end

@@ -14,8 +14,8 @@
 
 @interface Contact : TCRecord
 
-@property (nonatomic, retain) NSString * formattedPhone;
-@property (nonatomic, retain) NSString * phone;
+@property (nonatomic, retain) NSString *formattedPhone;
+@property (nonatomic, retain) NSString *phone;
 @property (nonatomic, retain) Venue *venue;
 
 @end
