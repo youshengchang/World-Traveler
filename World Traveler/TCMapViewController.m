@@ -7,6 +7,8 @@
 //
 
 #import "TCMapViewController.h"
+#import "Location.h"
+#import "FSCategory.h"
 
 @interface TCMapViewController ()
 
@@ -27,6 +29,21 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    float latitude = [self.venue.location.lat floatValue];
+    float langitude = [self.venue.location.lng floatValue];
+    
+    CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(latitude, langitude);
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(coordinate, 800, 800);
+    [self.mapView setRegion:[self.mapView regionThatFits:region] animated:YES];
+    
+    MKPointAnnotation *point = [[MKPointAnnotation alloc]init];
+    point.coordinate = coordinate;
+    point.title = self.venue.name;
+    point.subtitle = self.venue.category.name;
+    
+    [self.mapView addAnnotation:point];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,5 +62,7 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
 
 @end

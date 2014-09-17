@@ -12,23 +12,33 @@
 #import "AFMMRecordResponseSerializer.h"
 #import "Venue.h"
 #import "Location.h"
+#import "TCMapViewController.h"
 
 static NSString *const kCLIENTID = @"DFJ5UOHLCB0BBOEZDC244F3TXZLOEGLZY5O11A2DSLVFUFY4";
 static NSString *const kCLIENTSECRET = @"XGSHJLLF4YNK14CXIUF1PQRMZVXX2BAMAK3LQCTDISMRAYJE";
 
 
-@interface TCListViewController ()
+@interface TCListViewController ()<CLLocationManagerDelegate>
 
 @property (strong, nonatomic) NSArray *venues;
+@property (strong, nonatomic) CLLocationManager *locationManager;
+
 
 @end
 
 @implementation TCListViewController
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    self.locationManager = [[CLLocationManager alloc]init];
+    self.locationManager.delegate = self;
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
+    self.locationManager.distanceFilter = 10.0;
+    
     
     TCFourSquareSessionManager *sessionManager = [TCFourSquareSessionManager sharedClient];
     NSManagedObjectContext *context = [NSManagedObjectContext MR_defaultContext];
@@ -38,6 +48,7 @@ static NSString *const kCLIENTSECRET = @"XGSHJLLF4YNK14CXIUF1PQRMZVXX2BAMAK3LQCT
     [mapper registerEntityName:@"Venue" forEndpointPathComponent:@"venues/search?"];
     AFMMRecordResponseSerializer *serializer = [AFMMRecordResponseSerializer serializerWithManagedObjectContext:context responseObjectSerializer:HTTPResponseSerializer entityMapper:mapper];
     sessionManager.responseSerializer = serializer;
+    
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
@@ -50,20 +61,35 @@ static NSString *const kCLIENTSECRET = @"XGSHJLLF4YNK14CXIUF1PQRMZVXX2BAMAK3LQCT
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Segue
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSIndexPath *indexPath = sender;
+    Venue *venue = self.venues[indexPath.row];
+    TCMapViewController *mapVC = segue.destinationViewController;
+    mapVC.venue = venue;
+    
+}
+
 #pragma mark IBAction
 
-- (IBAction)refreshBarButtonItemPressed:(UIBarButtonItem *)sender {
+- (IBAction)refreshBarButtonPressed:(UIBarButtonItem *)sender {
+   
+    [self.locationManager startUpdatingLocation];
     
-    NSLog(@"refreshBarButtonItemPressed!");
+}
+
+#pragma mark - CLLocationManagerDelegate
+
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+{
+    CLLocation *location = [locations lastObject];
     
-    [[TCFourSquareSessionManager sharedClient]GET:@"venues/search?ll=30.25,-97.75" parameters:@{@"client_id":kCLIENTID, @"client_secret": kCLIENTSECRET, @"v": @"20140416"} success:^(NSURLSessionDataTask *task, id responseObject) {
+    [self.locationManager stopUpdatingLocation];
+    
+    [[TCFourSquareSessionManager sharedClient]GET:[NSString stringWithFormat:@"venues/search?ll=%f,%f", location.coordinate.latitude, location.coordinate.longitude] parameters:@{@"client_id":kCLIENTID, @"client_secret": kCLIENTSECRET, @"v": @"20140416"} success:^(NSURLSessionDataTask *task, id responseObject) {
         NSArray *venues = responseObject;
         self.venues = venues;
-        NSLog(@" Success: self.venues: %@", self.venues);
-        for(Venue *venue in self.venues){
-            NSLog(@"Venue's name: %@", venue.name);
-            NSLog(@"Location is: %@", venue.location.address);
-        }
         [self.tableView reloadData];
         
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
@@ -72,8 +98,12 @@ static NSString *const kCLIENTSECRET = @"XGSHJLLF4YNK14CXIUF1PQRMZVXX2BAMAK3LQCT
         NSLog(@"Error: %@", error);
         
     }];
-}
+    
+    
+    [self.tableView reloadData];
 
+    
+}
 #pragma mark - UITableView data Source
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -94,12 +124,28 @@ static NSString *const kCLIENTSECRET = @"XGSHJLLF4YNK14CXIUF1PQRMZVXX2BAMAK3LQCT
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
  
+    if(cell == nil){
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+        
+    }
+    
     Venue *venue = self.venues[indexPath.row];
+    
     NSLog(@"row = %d", indexPath.row);
     NSLog(@"venue %@", venue);
     cell.textLabel.text = venue.name;
     cell.detailTextLabel.text = venue.location.address;
+    
+    
+    
     return cell;
+    
+}
+
+#pragma mark - UITableView Delegate
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self performSegueWithIdentifier:@"listToMapSegue" sender:indexPath];
     
 }
 @end

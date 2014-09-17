@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import "Venue.h"
 
 @interface TCMapViewController : UIViewController
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
+
+@property (strong, nonatomic) Venue *venue;
 
 @end

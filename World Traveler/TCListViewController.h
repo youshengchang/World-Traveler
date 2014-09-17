@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface TCListViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
-
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
-- (IBAction)refreshBarButtonItemPressed:(UIBarButtonItem *)sender;
+- (IBAction)refreshBarButtonPressed:(UIBarButtonItem *)sender;
+
 
 @end
