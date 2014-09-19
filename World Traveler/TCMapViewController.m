@@ -9,6 +9,7 @@
 #import "TCMapViewController.h"
 #import "Location.h"
 #import "FSCategory.h"
+#import "TCDirectionsViewController.h"
 
 @interface TCMapViewController ()
 
@@ -29,6 +30,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.nameLabel.text = self.venue.name;
+    self.addressLabel.text = self.venue.location.address;
     
     float latitude = [self.venue.location.lat floatValue];
     float langitude = [self.venue.location.lng floatValue];
@@ -52,7 +56,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -60,9 +64,19 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if([segue.destinationViewController isKindOfClass:[TCDirectionsViewController class]])
+    {
+        TCDirectionsViewController *directionsVC = segue.destinationViewController;
+        directionsVC.venue = self.venue;
+    }
 }
-*/
 
 
 
+
+- (IBAction)showDirectionsBarButtonItemPressed:(UIBarButtonItem *)sender {
+    
+    [self performSegueWithIdentifier:@"mapToDirectionsSegue" sender:nil];
+    
+}
 @end

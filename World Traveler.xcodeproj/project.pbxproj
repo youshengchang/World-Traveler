@@ -36,6 +36,7 @@
 		8F1C43F819C55EBC00EA211A /* TCFourSquareSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C43F719C55EBC00EA211A /* TCFourSquareSessionManager.m */; };
 		8F1C43FA19C564A600EA211A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F1C43F919C564A600EA211A /* MapKit.framework */; };
 		8F1C43FC19C564B100EA211A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F1C43FB19C564B100EA211A /* CoreLocation.framework */; };
+		8F41F59819CCBAE200A0EA44 /* TCDirectionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F41F59719CCBAE200A0EA44 /* TCDirectionsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,8 @@
 		8F1C43F719C55EBC00EA211A /* TCFourSquareSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCFourSquareSessionManager.m; sourceTree = "<group>"; };
 		8F1C43F919C564A600EA211A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8F1C43FB19C564B100EA211A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		8F41F59619CCBAE200A0EA44 /* TCDirectionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCDirectionsViewController.h; sourceTree = "<group>"; };
+		8F41F59719CCBAE200A0EA44 /* TCDirectionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCDirectionsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +250,8 @@
 				8F1C43D819C3C06500EA211A /* TCMapViewController.m */,
 				8F1C43AF19C3B81A00EA211A /* TCListViewController.h */,
 				8F1C43B019C3B81A00EA211A /* TCListViewController.m */,
+				8F41F59619CCBAE200A0EA44 /* TCDirectionsViewController.h */,
+				8F41F59719CCBAE200A0EA44 /* TCDirectionsViewController.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -412,6 +417,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F41F59819CCBAE200A0EA44 /* TCDirectionsViewController.m in Sources */,
 				8F1C43DF19C54E1600EA211A /* WorldTravelerModel.xcdatamodeld in Sources */,
 				8F1C43D919C3C06500EA211A /* TCMapViewController.m in Sources */,
 				8F1C43F819C55EBC00EA211A /* TCFourSquareSessionManager.m in Sources */,
