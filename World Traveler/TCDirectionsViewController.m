@@ -7,6 +7,7 @@
 //
 
 #import "TCDirectionsViewController.h"
+#import "TCDirectionListViewController.h"
 
 @interface TCDirectionsViewController ()
 
@@ -32,6 +33,8 @@
     self.locationManager.delegate = self;
     [self.locationManager startUpdatingLocation];
     
+    self.directionsMap.delegate = self;
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -40,7 +43,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -48,10 +51,18 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if([segue.destinationViewController isKindOfClass:[TCDirectionListViewController class]]){
+        TCDirectionListViewController *directionListVC = segue.destinationViewController;
+        directionListVC.steps = self.steps;
+        
+        
+    }
 }
-*/
+
 
 - (IBAction)listDirectionsBarButtonItemPressed:(UIBarButtonItem *)sender {
+    [self performSegueWithIdentifier:@"directionToListSegue" sender:nil];
+    
 }
 
 
@@ -103,10 +114,20 @@
     self.steps = response.routes;
     
     for(MKRoute *route in self.steps){
-        for(MKRouteStep *step in route.steps){
-            NSLog(@"step instructions %@", step.instructions);
-        }
+        [self.directionsMap addOverlay:route.polyline level:MKOverlayLevelAboveRoads];
+        
+//        for(MKRouteStep *step in route.steps){
+//            NSLog(@"step instructions %@", step.instructions);
+ //       }
     }
+}
+
+-(MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id<MKOverlay>)overlay
+{
+    MKPolylineRenderer *renderer = [[MKPolylineRenderer alloc]initWithOverlay:overlay];
+    renderer.strokeColor = [UIColor redColor];
+    renderer.lineWidth = 3.0;
+    return renderer;
 }
     
 @end

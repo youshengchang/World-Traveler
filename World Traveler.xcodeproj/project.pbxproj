@@ -37,6 +37,7 @@
 		8F1C43FA19C564A600EA211A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F1C43F919C564A600EA211A /* MapKit.framework */; };
 		8F1C43FC19C564B100EA211A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F1C43FB19C564B100EA211A /* CoreLocation.framework */; };
 		8F41F59819CCBAE200A0EA44 /* TCDirectionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F41F59719CCBAE200A0EA44 /* TCDirectionsViewController.m */; };
+		8F41F59B19CCE72500A0EA44 /* TCDirectionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F41F59A19CCE72500A0EA44 /* TCDirectionListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,8 @@
 		8F1C43FB19C564B100EA211A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		8F41F59619CCBAE200A0EA44 /* TCDirectionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCDirectionsViewController.h; sourceTree = "<group>"; };
 		8F41F59719CCBAE200A0EA44 /* TCDirectionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCDirectionsViewController.m; sourceTree = "<group>"; };
+		8F41F59919CCE72500A0EA44 /* TCDirectionListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCDirectionListViewController.h; sourceTree = "<group>"; };
+		8F41F59A19CCE72500A0EA44 /* TCDirectionListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCDirectionListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +255,8 @@
 				8F1C43B019C3B81A00EA211A /* TCListViewController.m */,
 				8F41F59619CCBAE200A0EA44 /* TCDirectionsViewController.h */,
 				8F41F59719CCBAE200A0EA44 /* TCDirectionsViewController.m */,
+				8F41F59919CCE72500A0EA44 /* TCDirectionListViewController.h */,
+				8F41F59A19CCE72500A0EA44 /* TCDirectionListViewController.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -430,6 +435,7 @@
 				8F1C43B119C3B81A00EA211A /* TCListViewController.m in Sources */,
 				8F1C43A719C3B81A00EA211A /* main.m in Sources */,
 				8F1C43E419C555BA00EA211A /* Menu.m in Sources */,
+				8F41F59B19CCE72500A0EA44 /* TCDirectionListViewController.m in Sources */,
 				8F1C43F019C555BB00EA211A /* FSCategory.m in Sources */,
 				8F1C43AB19C3B81A00EA211A /* TCAppDelegate.m in Sources */,
 			);

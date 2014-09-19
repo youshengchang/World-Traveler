@@ -17,6 +17,9 @@
 static NSString *const kCLIENTID = @"DFJ5UOHLCB0BBOEZDC244F3TXZLOEGLZY5O11A2DSLVFUFY4";
 static NSString *const kCLIENTSECRET = @"XGSHJLLF4YNK14CXIUF1PQRMZVXX2BAMAK3LQCTDISMRAYJE";
 
+#define latitudeOffset 0.01
+#define longitudeOffset 0.01
+
 
 @interface TCListViewController ()<CLLocationManagerDelegate>
 
@@ -87,7 +90,7 @@ static NSString *const kCLIENTSECRET = @"XGSHJLLF4YNK14CXIUF1PQRMZVXX2BAMAK3LQCT
     
     [self.locationManager stopUpdatingLocation];
     
-    [[TCFourSquareSessionManager sharedClient]GET:[NSString stringWithFormat:@"venues/search?ll=%f,%f", location.coordinate.latitude, location.coordinate.longitude] parameters:@{@"client_id":kCLIENTID, @"client_secret": kCLIENTSECRET, @"v": @"20140416"} success:^(NSURLSessionDataTask *task, id responseObject) {
+    [[TCFourSquareSessionManager sharedClient]GET:[NSString stringWithFormat:@"venues/search?ll=%f,%f", location.coordinate.latitude + latitudeOffset, location.coordinate.longitude + longitudeOffset] parameters:@{@"client_id":kCLIENTID, @"client_secret": kCLIENTSECRET, @"v": @"20140416"} success:^(NSURLSessionDataTask *task, id responseObject) {
         NSArray *venues = responseObject;
         self.venues = venues;
         [self.tableView reloadData];
