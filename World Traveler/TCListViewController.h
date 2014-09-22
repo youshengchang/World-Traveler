@@ -13,5 +13,6 @@
 
 - (IBAction)refreshBarButtonPressed:(UIBarButtonItem *)sender;
 
+- (IBAction)manuBarButtonItemPressed:(UIBarButtonItem *)sender;
 
 @end

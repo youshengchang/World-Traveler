@@ -13,6 +13,7 @@
 #import "Venue.h"
 #import "Location.h"
 #import "TCMapViewController.h"
+#import "TCAppDelegate.h"
 
 static NSString *const kCLIENTID = @"DFJ5UOHLCB0BBOEZDC244F3TXZLOEGLZY5O11A2DSLVFUFY4";
 static NSString *const kCLIENTSECRET = @"XGSHJLLF4YNK14CXIUF1PQRMZVXX2BAMAK3LQCTDISMRAYJE";
@@ -79,6 +80,12 @@ static NSString *const kCLIENTSECRET = @"XGSHJLLF4YNK14CXIUF1PQRMZVXX2BAMAK3LQCT
 - (IBAction)refreshBarButtonPressed:(UIBarButtonItem *)sender {
    
     [self.locationManager startUpdatingLocation];
+    
+}
+
+- (IBAction)manuBarButtonItemPressed:(UIBarButtonItem *)sender {
+    
+    [[self drawerControllerFromAppDelegate] toggleDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
     
 }
 
@@ -149,6 +156,14 @@ static NSString *const kCLIENTSECRET = @"XGSHJLLF4YNK14CXIUF1PQRMZVXX2BAMAK3LQCT
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [self performSegueWithIdentifier:@"listToMapSegue" sender:indexPath];
+    
+}
+
+#pragma mark - DrawerController
+-(MMDrawerController *)drawerControllerFromAppDelegate
+{
+    TCAppDelegate *appDelegate = (TCAppDelegate *)[[UIApplication sharedApplication]delegate];
+    return appDelegate.drawerController;
     
 }
 @end

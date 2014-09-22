@@ -79,4 +79,10 @@
     [self performSegueWithIdentifier:@"mapToDirectionsSegue" sender:nil];
     
 }
+
+- (IBAction)favoriteButtonPressed:(UIButton *)sender {
+    self.venue.favorite = [NSNumber numberWithBool:YES];
+    [[NSManagedObjectContext MR_defaultContext]MR_saveOnlySelfAndWait];
+    
+}
 @end

@@ -7,14 +7,45 @@
 //
 
 #import "TCAppDelegate.h"
+#import "TCManuViewController.h"
+#import "TCListViewController.h"
+#import "MMDrawerVisualState.h"
+
+
 
 @implementation TCAppDelegate
+
+-(BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    [MagicalRecord setupCoreDataStackWithStoreNamed:@"WorldTravelerModel"];
+
+    UIStoryboard *mainStroyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    TCManuViewController *manuController = (TCManuViewController *)[mainStroyboard instantiateViewControllerWithIdentifier:@"manuViewControllerID"];
+    
+    TCListViewController *listController = (TCListViewController *)[mainStroyboard instantiateViewControllerWithIdentifier:@"listViewControllerID"];
+    
+    self.drawerController = [[MMDrawerController alloc]initWithCenterViewController:listController leftDrawerViewController:manuController];
+    [self.drawerController setMaximumLeftDrawerWidth:240.0];
+    [self.drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
+    [self.drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
+    
+    [self.drawerController setDrawerVisualStateBlock:[MMDrawerVisualState slideAndScaleVisualStateBlock]];
+    
+    self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+    [self.window setRootViewController:self.drawerController];
+    
+    
+    return YES;
+    
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    [MagicalRecord setupCoreDataStackWithStoreNamed:@"WorldTravelerModel"];
-    return YES;
+    [self.window makeKeyAndVisible];
+    
+       return YES;
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application
